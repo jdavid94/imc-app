@@ -7,6 +7,7 @@ public class Persona {
 	private String sexo;
 	private String fechaNacimiento;
 	private String tipoPersona;
+	private Imc imc;
 	
 		
    public Persona(String nombre, String apellido, String newSexo, String fechaNacimiento, String newTipoPersona) {
@@ -16,6 +17,7 @@ public class Persona {
 		this.sexo = newSexo;
 		this.fechaNacimiento = fechaNacimiento;
 		this.tipoPersona = newTipoPersona;
+		this.imc = null;		
 	}
 
 	public String getNombre() {
@@ -57,5 +59,14 @@ public class Persona {
 	public void setTipoPersona(String tipoPersona) {
 		this.tipoPersona = tipoPersona;
 	}
+
+	public Imc getImc() {
+		return imc;
+	}
+
+	public void setImc(Imc imc) {
+		this.imc = imc;
+	}
+	
 
 }

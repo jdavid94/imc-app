@@ -7,7 +7,7 @@ public class Imc {
 	private double altura;
 	
 		
-	public Imc(String fecha, int peso, int altura) {
+	public Imc(String fecha, double peso, double altura) {
 		super();
 		this.fecha = fecha;
 		this.peso = peso;
