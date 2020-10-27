@@ -5,6 +5,7 @@ public class Imc {
 	private String fecha;
 	private double peso;
 	private double altura;
+	private String interpretacion;
 	
 		
 	public Imc(String fecha, double peso, double altura) {
@@ -12,6 +13,7 @@ public class Imc {
 		this.fecha = fecha;
 		this.peso = peso;
 		this.altura = altura;
+		this.interpretacion = "";
 	}
 
 	public String getFecha() {
@@ -38,6 +40,16 @@ public class Imc {
 		this.altura = altura;
 	}
 	
+	
+	
+	public String getInterpretacion() {
+		return interpretacion;
+	}
+
+	public void setInterpretacion(String interpretacion) {
+		this.interpretacion = interpretacion;
+	}
+
 	public double calcularImc() {
 		return this.peso/(this.altura*this.altura);
 	}

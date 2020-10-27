@@ -20,7 +20,7 @@ public class Main {
         while (!salir) {           
             try { 
             	
-                System.out.println("0. Inscripción Usuario");
+                System.out.println("0. Inscripcion Usuario");
                 System.out.println("1. Ingresar Persona");
                 System.out.println("2. Calcular IMC");
                 System.out.println("3. Mostrar Listado");
@@ -104,6 +104,8 @@ public class Main {
 	                        break;	                        
 		                    } else {
 		                        System.out.println("Error usuario o password no valido");
+		                        System.out.println("\n"); 
+		                        break;
 		                    }             	   		
                         }
                         break;
@@ -121,7 +123,7 @@ public class Main {
 	                    String pass = input.nextLine();
 	                    if (newUsuario.getCorreo().contentEquals(correo) && newUsuario.getPassword().contentEquals(pass)) {
 	                    	System.out.println("Usuario Valido");
-	                    	System.out.print("Ficha de Usuario:");	                    	
+	                    	System.out.println("Ficha de Usuario:");	                    	
 	                        System.out.println("------------------------------"); 
 	                        System.out.println("Nombre: " + newUsuario.getPersona().getNombre());
 	                        System.out.println("Apellido: " + newUsuario.getPersona().getApellido());
@@ -135,11 +137,9 @@ public class Main {
 	                        String newFecha = input.nextLine();
 	                        System.out.println("Ingrese su Peso");
 	                        double newPeso = input.nextDouble();
-	                        System.out.println("Ingrese su Altura");
+	                        System.out.println("Ingrese su Altura - [0,00]");
 	                        double newAltura = input.nextDouble();
-	                        Imc imc = new Imc(newFecha, newPeso, newAltura);	                        
-	                        imcList.add(imc);
-	                        newUsuario.getPersona().setImc(imcList);
+	                        Imc imc = new Imc(newFecha, newPeso, newAltura);                  
 	                        double result = imc.calcularImc();
 	                        System.out.println("-------------------------");
 	                        System.out.println("Su Indice de Masa Corporal");
@@ -148,47 +148,64 @@ public class Main {
 	                        	// Hombres
 		                        if(result < 20.00){
 		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Bajo Peso");
+		                        	System.out.println("Bajo Peso");	
+		                        	imc.setInterpretacion("Bajo Peso");
 		                        }else if(result>=20.00 && result<=24.9){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Normal");
+		                        	imc.setInterpretacion("Normal");
 		                        }else if(result>=25.00 && result<=29.9){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Obesidad Leve");
+		                        	imc.setInterpretacion("Obesidad Leve");
 		                        }else if(result>=30.00 && result<=40.00){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Obesidad Severa");
+		                        	imc.setInterpretacion("Obesidad Severa");
 		                        }else if(result > 40.00){
 		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Muy Severa");	                     
+		                        	System.out.println("Obesidad Muy Severa");
+		                        	imc.setInterpretacion("Obesidad Muy Severa");
 		                        }else{
 		                        	System.out.println("Sin Clasificacón - Consulte a su Medico");
+		                        	imc.setInterpretacion("Sin Clasificacón");
 		                        }
 	                        }else {
 	                        	 // Mujeres
 		                        if(result < 20.00){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Bajo Peso");
+		                        	imc.setInterpretacion("Bajo Peso");
 		                        }else if(result>=20.00 && result<=23.9){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Normal");
+		                        	imc.setInterpretacion("Normal");
 		                        }else if(result>=24.00 && result<=28.9){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Obesidad Leve");
+		                        	imc.setInterpretacion("Obesidad Leve");
 		                        }else if(result>=29.00 && result<=37.00){
 		                        	System.out.println("Valor : " + result);
 		                        	System.out.println("Obesidad Severa");
+		                        	imc.setInterpretacion("Obesidad Severa");
 		                        }else if(result > 37.00){
 		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Muy Severa");	                     
+		                        	System.out.println("Obesidad Muy Severa");
+		                        	imc.setInterpretacion("Obesidad Muy Severa");
 		                        }else{
 		                        	System.out.println("Sin Clasificacón - Consulte a su Medico");
+		                        	imc.setInterpretacion("Sin Clasificacón");
 		                        }
-	                        }                                     
+	                        }
+	                        // Agregamos IMC con todos los datos a la lista
+	                        imcList.add(imc);
+	                        // Asociamos la lista a la persona.
+	                        newUsuario.getPersona().setImc(imcList);
 	                        System.out.println("\n");       
 	                        break;	                    	
 	                    } else {
-	                        System.out.print("Error usuario o password no valido");
+	                        System.out.println("Error usuario o password no valido");	                        
+	                        System.out.println("\n"); 	                      
 	                    }                         
                         break;
                     case "3":
@@ -197,7 +214,7 @@ public class Main {
                    	   		System.out.println("---------------------------------"); 
                    	   		break;               	   		
                    	   	}
-                    	System.out.print("Ficha de Usuario:");	                    	
+                    	System.out.println("Ficha de Usuario:");	                    	
                         System.out.println("------------------------------"); 
                         System.out.println("Nombre: " + newUsuario.getPersona().getNombre());
                         System.out.println("Apellido: " + newUsuario.getPersona().getApellido());
@@ -212,7 +229,7 @@ public class Main {
                             System.out.println("Altuma cm : " + imcList.get(i).getAltura());
                             System.out.println("Peso Kg : " + imcList.get(i).getPeso());
                             System.out.println("IMC : " + imcList.get(i).calcularImc());
-                            System.out.println("Observacion : ");
+                            System.out.println("Observacion : " + imcList.get(i).getInterpretacion());
                             System.out.println("--------------------------------");
                             System.out.println("\n"); 
                         }
