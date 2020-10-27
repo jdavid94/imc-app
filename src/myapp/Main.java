@@ -1,7 +1,11 @@
 package myapp;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -11,6 +15,7 @@ public class Main {
         boolean salir = false;
         String opcion;    
         Usuario newUsuario = null;
+        List<Imc> imcList = new ArrayList<Imc>();
         
         while (!salir) {           
             try { 
@@ -26,31 +31,44 @@ public class Main {
                 switch (opcion) {
                    case "0":  
                 	  
-                	   String opcion0 = null;
                 	   boolean salir0 = false;
                 	   while (!salir0) {
                 		   System.out.println("Inscripción de Usuario");
                            System.out.println("------------------------------");                         
                            System.out.println("Inserte Correo Electronico");                     
                            String newCorreo = input.nextLine();
+                           // Validamos que sea un correo electronico valido.
+                           if (!validarMail(newCorreo)) {
+                        	   while (!validarMail(newCorreo)) {
+                        		   System.out.println("Correo no valido!!");   
+                            	   System.out.println("Inserte Correo Electronico");                     
+                                   newCorreo = input.nextLine();
+                        	   }                        	   
+                           }
                            System.out.println("Inserte Cotraseña Usuario");                 
                            String newPass = input.nextLine();
+                           // Validamos que la contraseña sea mayor a 4 caracteres
+                           if (newPass.length() < 4) {
+                        	   while (newPass.length() < 4) {
+                        		   System.out.println("Minimo 4 Caracteres!!");   
+                            	   System.out.println("Inserte Cotraseña Usuario");                     
+                            	   newPass = input.nextLine();
+                        	   }                        	   
+                           }
                            newUsuario = new Usuario(newCorreo, newPass);
                            System.out.println("------------------------------");
-                           System.out.println("Usuario Registrado con Exito!!");
-                           System.out.println("[v] Para Volver - [i] Ingresar Otro Usuario");
-                           opcion0 = input.nextLine();
-                           if (opcion0.equals("v")) {
-                        	   salir0 = true;
-                        	   break;  
-                           }
+                           System.out.println("Usuario Registrado con Exito!!");                     
+                           System.out.println("\n");                                             
+                           salir0 = true;
+                           break;  
+                         
                 	   }	
                 	   break;                                                   
                   case "1":                	
                	   	boolean salir1 = false;
                	   	while (!salir1) {
                	   		if (newUsuario == null) {
-               	   		System.out.println("Debe generar Usuario - Opcion [1]"); 
+               	   		System.out.println("Debe Registrarse - Opcion [0]"); 
                	   		System.out.println("---------------------------------"); 
                	   		break;               	   		
                	   		}
@@ -61,7 +79,7 @@ public class Main {
 	                    System.out.println("Ingrese Password");
 	                    String pass = input.nextLine();
 	                    if (newUsuario.getCorreo().contentEquals(correo) && newUsuario.getPassword().contentEquals(pass)) {
-	                        System.out.print("Usuario Valido");
+	                        System.out.println("Usuario Valido");
 	                        System.out.println("------------------------------"); 
 	                        System.out.println("Ingrear Persona");
 	                        System.out.println("------------------------------");  
@@ -71,7 +89,7 @@ public class Main {
 	                        String newName = input.nextLine();
 	                        System.out.println("Inserte Apellido");
 	                        String newApellido = input.nextLine();
-	                        System.out.println("Inserte Sexo [m] o [f]");
+	                        System.out.println("Inserte Sexo Masculino [m] o Femenino [f]");
 	                        String newSexo = input.nextLine();
 	                        System.out.println("Fecha Nacimiento dd/mm/aaaa");
 	                        String newFecha = input.nextLine();
@@ -81,7 +99,8 @@ public class Main {
 	                        newUsuario.setPersona(newPersona);
 	                        System.out.println("------------------------------");  
 	                        System.out.println("Persona Registrada con Exito!!");	
-	                        salir0 = true;
+	                        System.out.println("\n"); 
+	                        salir1 = true;
 	                        break;	                        
 		                    } else {
 		                        System.out.println("Error usuario o password no valido");
@@ -101,7 +120,7 @@ public class Main {
 	                    System.out.println("Ingrese Password");
 	                    String pass = input.nextLine();
 	                    if (newUsuario.getCorreo().contentEquals(correo) && newUsuario.getPassword().contentEquals(pass)) {
-	                    	System.out.print("Usuario Valido");
+	                    	System.out.println("Usuario Valido");
 	                    	System.out.print("Ficha de Usuario:");	                    	
 	                        System.out.println("------------------------------"); 
 	                        System.out.println("Nombre: " + newUsuario.getPersona().getNombre());
@@ -118,8 +137,9 @@ public class Main {
 	                        double newPeso = input.nextDouble();
 	                        System.out.println("Ingrese su Altura");
 	                        double newAltura = input.nextDouble();
-	                        Imc imc = new Imc(newFecha, newPeso, newAltura);
-	                        newUsuario.getPersona().setImc(imc);
+	                        Imc imc = new Imc(newFecha, newPeso, newAltura);	                        
+	                        imcList.add(imc);
+	                        newUsuario.getPersona().setImc(imcList);
 	                        double result = imc.calcularImc();
 	                        System.out.println("-------------------------");
 	                        System.out.println("Su Indice de Masa Corporal");
@@ -165,15 +185,37 @@ public class Main {
 		                        	System.out.println("Sin Clasificacón - Consulte a su Medico");
 		                        }
 	                        }                                     
-	                               
+	                        System.out.println("\n");       
 	                        break;	                    	
 	                    } else {
 	                        System.out.print("Error usuario o password no valido");
 	                    }                         
                         break;
                     case "3":
+                    	if (newUsuario == null) {
+                   	   		System.out.println("Debe generar Usuario - Opcion [1]"); 
+                   	   		System.out.println("---------------------------------"); 
+                   	   		break;               	   		
+                   	   	}
+                    	System.out.print("Ficha de Usuario:");	                    	
+                        System.out.println("------------------------------"); 
+                        System.out.println("Nombre: " + newUsuario.getPersona().getNombre());
+                        System.out.println("Apellido: " + newUsuario.getPersona().getApellido());
+                        System.out.println("Fecha Nacimiento: " + newUsuario.getPersona().getFechaNacimiento());
+                        System.out.println("Sexo: " + newUsuario.getPersona().getSexo());
+                        System.out.println("Tipo Persona: " + newUsuario.getPersona().getTipoPersona());	                  
+                        System.out.println("------------------------------"); 
                         System.out.println("Listado de Estados Nutricionales");
                         System.out.println("--------------------------------");
+                        for (int i = 0; i <= imcList.size() - 1; i++) {
+                            System.out.println("Fecha Toma : " + imcList.get(i).getFecha());
+                            System.out.println("Altuma cm : " + imcList.get(i).getAltura());
+                            System.out.println("Peso Kg : " + imcList.get(i).getPeso());
+                            System.out.println("IMC : " + imcList.get(i).calcularImc());
+                            System.out.println("Observacion : ");
+                            System.out.println("--------------------------------");
+                            System.out.println("\n"); 
+                        }
                         break;
                     case "4":
                     	System.out.println("Aplicacion Finalizada");
@@ -188,8 +230,16 @@ public class Main {
                 input.next();
             }
         }
+        input.close();
  
     }	
+	
+	public static boolean validarMail(String email) {
+        // Patron para validar el email
+        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"); 
+        Matcher mather = pattern.matcher(email);
+        return mather.find();
+    }
 
 
 }

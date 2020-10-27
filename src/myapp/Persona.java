@@ -1,13 +1,17 @@
 package myapp;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Persona {
 	
 	private String nombre;
 	private String apellido;
 	private String sexo;
 	private String fechaNacimiento;
-	private String tipoPersona;
-	private Imc imc;
+	private String tipoPersona;	
+	private List<Imc> imc;
 	
 		
    public Persona(String nombre, String apellido, String newSexo, String fechaNacimiento, String newTipoPersona) {
@@ -17,7 +21,7 @@ public class Persona {
 		this.sexo = newSexo;
 		this.fechaNacimiento = fechaNacimiento;
 		this.tipoPersona = newTipoPersona;
-		this.imc = null;		
+		this.imc = new ArrayList<Imc>();			
 	}
 
 	public String getNombre() {
@@ -60,13 +64,15 @@ public class Persona {
 		this.tipoPersona = tipoPersona;
 	}
 
-	public Imc getImc() {
+	public List<Imc> getImc() {
 		return imc;
 	}
 
-	public void setImc(Imc imc) {
+	public void setImc(List<Imc> imc) {
 		this.imc = imc;
 	}
+
+
 	
 
 }
