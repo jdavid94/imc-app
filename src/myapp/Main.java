@@ -14,7 +14,7 @@ public class Main {
 		Scanner input = new Scanner(System.in);
         boolean salir = false;
         String opcion;    
-        Usuario newUsuario = null;
+        Usuario newUsuario = new Usuario("","");
         List<Imc> imcList = new ArrayList<Imc>();
         
         while (!salir) {           
@@ -48,8 +48,8 @@ public class Main {
                            System.out.println("Inserte Cotraseña Usuario");                 
                            String newPass = input.nextLine();
                            // Validamos que la contraseña sea mayor a 4 caracteres
-                           if (newUsuario.validarLargoPassword(newPass)) {
-                        	   while (newUsuario.validarLargoPassword(newPass)) {
+                           if (!newUsuario.validarLargoPassword(newPass)) {
+                        	   while (!newUsuario.validarLargoPassword(newPass)) {
                         		   System.out.println("Minimo 4 Caracteres!!");   
                             	   System.out.println("Inserte Cotraseña Usuario");                     
                             	   newPass = input.nextLine();
@@ -144,59 +144,7 @@ public class Main {
 	                        System.out.println("-------------------------");
 	                        System.out.println("Su Indice de Masa Corporal");
 	                        System.out.println("-------------------------");
-	                        if (newUsuario.getPersona().getSexo().equals("m")) {
-	                        	// Hombres
-		                        if(result < 20.00){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Bajo Peso");	
-		                        	imc.setInterpretacion("Bajo Peso");
-		                        }else if(result>=20.00 && result<=24.9){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Normal");
-		                        	imc.setInterpretacion("Normal");
-		                        }else if(result>=25.00 && result<=29.9){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Leve");
-		                        	imc.setInterpretacion("Obesidad Leve");
-		                        }else if(result>=30.00 && result<=40.00){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Severa");
-		                        	imc.setInterpretacion("Obesidad Severa");
-		                        }else if(result > 40.00){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Muy Severa");
-		                        	imc.setInterpretacion("Obesidad Muy Severa");
-		                        }else{
-		                        	System.out.println("Sin Clasificacón - Consulte a su Medico");
-		                        	imc.setInterpretacion("Sin Clasificacón");
-		                        }
-	                        }else {
-	                        	 // Mujeres
-		                        if(result < 20.00){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Bajo Peso");
-		                        	imc.setInterpretacion("Bajo Peso");
-		                        }else if(result>=20.00 && result<=23.9){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Normal");
-		                        	imc.setInterpretacion("Normal");
-		                        }else if(result>=24.00 && result<=28.9){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Leve");
-		                        	imc.setInterpretacion("Obesidad Leve");
-		                        }else if(result>=29.00 && result<=37.00){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Severa");
-		                        	imc.setInterpretacion("Obesidad Severa");
-		                        }else if(result > 37.00){
-		                        	System.out.println("Valor : " + result);
-		                        	System.out.println("Obesidad Muy Severa");
-		                        	imc.setInterpretacion("Obesidad Muy Severa");
-		                        }else{
-		                        	System.out.println("Sin Clasificacón - Consulte a su Medico");
-		                        	imc.setInterpretacion("Sin Clasificacón");
-		                        }
-	                        }
+	                        imc.mostrarIMC(newUsuario.getPersona().getSexo(), newPeso , newAltura);
 	                        // Agregamos IMC con todos los datos a la lista
 	                        imcList.add(imc);
 	                        // Asociamos la lista a la persona.
