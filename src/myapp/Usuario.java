@@ -10,6 +10,9 @@ public class Usuario {
 	private Persona persona;
 		
 
+	public Usuario () {
+		
+	}
 	public Usuario(String correo, String password) {
 		super();
 		this.correo = correo;

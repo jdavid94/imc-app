@@ -7,6 +7,10 @@ public class Imc {
 	private double altura;
 	private String interpretacion;
 
+	
+	public Imc() {
+		
+	}
 	public Imc(String fecha, double peso, double altura) {
 		super();
 		this.fecha = fecha;
@@ -51,7 +55,7 @@ public class Imc {
 		return this.peso / (this.altura * this.altura);
 	}
 
-	public void mostrarIMC(String sexo, double peso, double altura) {
+	public void mostrarIMC(String sexo) {
 		double result = calcularImc();
 		if (sexo.equals("m")) {
 			if (result < 20.00) {

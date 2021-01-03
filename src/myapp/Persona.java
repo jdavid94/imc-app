@@ -13,6 +13,9 @@ public class Persona {
 	private String tipoPersona;	
 	private List<Imc> imc;
 	
+	public Persona() {
+		
+	}
 		
    public Persona(String nombre, String apellido, String newSexo, String fechaNacimiento, String newTipoPersona) {
 		super();

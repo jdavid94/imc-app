@@ -144,7 +144,7 @@ public class Main {
 	                        System.out.println("-------------------------");
 	                        System.out.println("Su Indice de Masa Corporal");
 	                        System.out.println("-------------------------");
-	                        imc.mostrarIMC(newUsuario.getPersona().getSexo(), newPeso , newAltura);
+	                        imc.mostrarIMC(newUsuario.getPersona().getSexo());
 	                        // Agregamos IMC con todos los datos a la lista
 	                        imcList.add(imc);
 	                        // Asociamos la lista a la persona.
