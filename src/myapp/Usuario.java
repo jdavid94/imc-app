@@ -1,5 +1,8 @@
 package myapp;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Usuario {
 	
 	private String correo;
@@ -38,7 +41,34 @@ public class Usuario {
 		this.persona = persona;
 	}
 	
+	public boolean validarCorreos(String emailA, String emailB) {
+		boolean validador = false;
+		if(emailA.equals(emailB)) {
+			validador = true;
+		}
+		return validador;
+	}
 	
+	public boolean validarPasswords(String pswd1, String pswd2) {
+		boolean validador = false;
+		if(pswd1.equals(pswd2)) {
+			validador = true;
+		}
+		return validador;
+	}
 	
+	public boolean validarMail(String email) {
+        // Patron para validar el email
+        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"); 
+        Matcher mather = pattern.matcher(email);
+        return mather.find();
+    }
 	
+	public boolean validarLargoPassword(String password) {
+		boolean validador = false;
+		if (password.length() > 4) {
+            validador = true;         	   
+        }
+		return validador;
+	}
 }

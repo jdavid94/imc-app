@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_zwmpABxqEeu0Y4xsG44j_g" name="imc_app_proyecto012">
+    <eAnnotations xmi:id="_z30EQBxqEeu0Y4xsG44j_g" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_z34VsBxqEeu0Y4xsG44j_g" source="codegen">
+        <details xmi:id="_z34VsRxqEeu0Y4xsG44j_g" key="codegenDirectory" value="/imc-app-proyecto01/src"/>
+        <details xmi:id="_0pbHYBxqEeu0Y4xsG44j_g" key="AssociatedSourceCode" value="/imc-app-proyecto01/src/myapp/Imc.java;3025589351/1;/imc-app-proyecto01/src/myapp/Main.java;3959847076/1;/imc-app-proyecto01/src/myapp/Persona.java;1458446462/1;/imc-app-proyecto01/src/myapp/Usuario.java;876883795/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_0ELsUBxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_0EMTYBxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_0EM6cBxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_0EM6cRxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_0ENhgBxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_0ENhgRxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_0EOIkBxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_0EOIkRxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_0EPWsBxqEeu0Y4xsG44j_g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0EhqkBxqEeu0Y4xsG44j_g" name="myapp">
+      <packagedElement xmi:type="uml:Class" xmi:id="_0FKjwBxqEeu0Y4xsG44j_g" name="Imc">
+        <ownedAttribute xmi:id="_0I7CYBxqEeu0Y4xsG44j_g" name="fecha">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0I7pcBxqEeu0Y4xsG44j_g" name="peso">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0I83kBxqEeu0Y4xsG44j_g" name="altura">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0I9eoBxqEeu0Y4xsG44j_g" name="interpretacion">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0JRnsBxqEeu0Y4xsG44j_g" name="Imc" specification="_0FSfkBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0JSOwBxqEeu0Y4xsG44j_g" name="fecha">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JSOwRxqEeu0Y4xsG44j_g" name="peso">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JSOwhxqEeu0Y4xsG44j_g" name="altura">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JSOwxxqEeu0Y4xsG44j_g" type="_0FKjwBxqEeu0Y4xsG44j_g" direction="return"/>
+          <language>java</language>
+          <body>super();&#xD;
+		this.fecha = fecha;&#xD;
+		this.peso = peso;&#xD;
+		this.altura = altura;&#xD;
+		this.interpretacion = &quot;&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0JWgMBxqEeu0Y4xsG44j_g" name="calcularImc" specification="_0FX_IBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0JWgMRxqEeu0Y4xsG44j_g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.peso/(this.altura*this.altura);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_0FSfkBxqEeu0Y4xsG44j_g" name="Imc" method="_0JRnsBxqEeu0Y4xsG44j_g">
+          <eAnnotations xmi:id="_0FVi4BxqEeu0Y4xsG44j_g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_0FVi4RxqEeu0Y4xsG44j_g" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_0FSfkRxqEeu0Y4xsG44j_g" name="fecha">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FTGoBxqEeu0Y4xsG44j_g" name="peso">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FTGoRxqEeu0Y4xsG44j_g" name="altura">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FWJ8BxqEeu0Y4xsG44j_g" type="_0FKjwBxqEeu0Y4xsG44j_g" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_0FX_IBxqEeu0Y4xsG44j_g" name="calcularImc" method="_0JWgMBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0FYmMBxqEeu0Y4xsG44j_g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0FbCcBxqEeu0Y4xsG44j_g" name="Main">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0JXHQBxqEeu0Y4xsG44j_g" name="main" specification="_0FdesBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0JXHQRxqEeu0Y4xsG44j_g" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0JXHQhxqEeu0Y4xsG44j_g" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Scanner input = new Scanner(System.in);&#xD;
+     boolean salir = false;&#xD;
+     String opcion;    &#xD;
+     Usuario newUsuario = null;&#xD;
+     List&lt;Imc> imcList = new ArrayList&lt;Imc>();&#xD;
+     &#xD;
+     while (!salir) {           &#xD;
+         try { &#xD;
+         	&#xD;
+             System.out.println(&quot;0. Inscripcion Usuario&quot;);&#xD;
+             System.out.println(&quot;1. Ingresar Persona&quot;);&#xD;
+             System.out.println(&quot;2. Calcular IMC&quot;);&#xD;
+             System.out.println(&quot;3. Mostrar Listado&quot;);&#xD;
+             System.out.println(&quot;4. Salir&quot;);&#xD;
+             System.out.println(&quot;---------------------------&quot;);&#xD;
+             System.out.println(&quot;Escribe una de las opciones&quot;);             &#xD;
+             opcion = input.nextLine(); &#xD;
+             switch (opcion) {&#xD;
+                case &quot;0&quot;:  &#xD;
+             	  &#xD;
+             	   boolean salir0 = false;&#xD;
+             	   while (!salir0) {&#xD;
+             		   System.out.println(&quot;Inscripción de Usuario&quot;);&#xD;
+                        System.out.println(&quot;------------------------------&quot;);                         &#xD;
+                        System.out.println(&quot;Inserte Correo Electronico&quot;);                     &#xD;
+                        String newCorreo = input.nextLine();&#xD;
+                        // Validamos que sea un correo electronico valido.&#xD;
+                        if (!validarMail(newCorreo)) {&#xD;
+                     	   while (!validarMail(newCorreo)) {&#xD;
+                     		   System.out.println(&quot;Correo no valido!!&quot;);   &#xD;
+                         	   System.out.println(&quot;Inserte Correo Electronico&quot;);                     &#xD;
+                                newCorreo = input.nextLine();&#xD;
+                     	   }                        	   &#xD;
+                        }&#xD;
+                        System.out.println(&quot;Inserte Cotraseña Usuario&quot;);                 &#xD;
+                        String newPass = input.nextLine();&#xD;
+                        // Validamos que la contraseña sea mayor a 4 caracteres&#xD;
+                        if (newPass.length() &lt; 4) {&#xD;
+                     	   while (newPass.length() &lt; 4) {&#xD;
+                     		   System.out.println(&quot;Minimo 4 Caracteres!!&quot;);   &#xD;
+                         	   System.out.println(&quot;Inserte Cotraseña Usuario&quot;);                     &#xD;
+                         	   newPass = input.nextLine();&#xD;
+                     	   }                        	   &#xD;
+                        }&#xD;
+                        newUsuario = new Usuario(newCorreo, newPass);&#xD;
+                        System.out.println(&quot;------------------------------&quot;);&#xD;
+                        System.out.println(&quot;Usuario Registrado con Exito!!&quot;);                     &#xD;
+                        System.out.println(&quot;\n&quot;);                                             &#xD;
+                        salir0 = true;&#xD;
+                        break;  &#xD;
+                      &#xD;
+             	   }	&#xD;
+             	   break;                                                   &#xD;
+               case &quot;1&quot;:                	&#xD;
+            	   	boolean salir1 = false;&#xD;
+            	   	while (!salir1) {&#xD;
+            	   		if (newUsuario == null) {&#xD;
+            	   		System.out.println(&quot;Debe Registrarse - Opcion [0]&quot;); &#xD;
+            	   		System.out.println(&quot;---------------------------------&quot;); &#xD;
+            	   		break;               	   		&#xD;
+            	   		}&#xD;
+	               	   	System.out.println(&quot;Debe Autenticarse&quot;);&#xD;
+	                    System.out.println(&quot;------------------------------&quot;);  &#xD;
+	                    System.out.println(&quot;Ingrese Correo&quot;);&#xD;
+	                    String correo = input.nextLine();&#xD;
+	                    System.out.println(&quot;Ingrese Password&quot;);&#xD;
+	                    String pass = input.nextLine();&#xD;
+	                    if (newUsuario.getCorreo().contentEquals(correo) &amp;&amp; newUsuario.getPassword().contentEquals(pass)) {&#xD;
+	                        System.out.println(&quot;Usuario Valido&quot;);&#xD;
+	                        System.out.println(&quot;------------------------------&quot;); &#xD;
+	                        System.out.println(&quot;Ingrear Persona&quot;);&#xD;
+	                        System.out.println(&quot;------------------------------&quot;);  &#xD;
+	                        System.out.println(&quot;Datos Usuario Autenticado&quot;);&#xD;
+	                        System.out.println(&quot;------------------------------&quot;); &#xD;
+	                        System.out.println(&quot;Inserte Nombre&quot;);&#xD;
+	                        String newName = input.nextLine();&#xD;
+	                        System.out.println(&quot;Inserte Apellido&quot;);&#xD;
+	                        String newApellido = input.nextLine();&#xD;
+	                        System.out.println(&quot;Inserte Sexo Masculino [m] o Femenino [f]&quot;);&#xD;
+	                        String newSexo = input.nextLine();&#xD;
+	                        System.out.println(&quot;Fecha Nacimiento dd/mm/aaaa&quot;);&#xD;
+	                        String newFecha = input.nextLine();&#xD;
+	                        System.out.println(&quot;Atleta [a] - Persona Natural [n]&quot;);   &#xD;
+	                        String newTipoPersona = input.nextLine();	                        &#xD;
+	                        Persona newPersona = new Persona(newName, newApellido, newSexo, newFecha, newTipoPersona);&#xD;
+	                        newUsuario.setPersona(newPersona);&#xD;
+	                        System.out.println(&quot;------------------------------&quot;);  &#xD;
+	                        System.out.println(&quot;Persona Registrada con Exito!!&quot;);	&#xD;
+	                        System.out.println(&quot;\n&quot;); &#xD;
+	                        salir1 = true;&#xD;
+	                        break;	                        &#xD;
+		                    } else {&#xD;
+		                        System.out.println(&quot;Error usuario o password no valido&quot;);&#xD;
+		                        System.out.println(&quot;\n&quot;); &#xD;
+		                        break;&#xD;
+		                    }             	   		&#xD;
+                     }&#xD;
+                     break;&#xD;
+                 case &quot;2&quot;:&#xD;
+                 	if (newUsuario == null) {&#xD;
+                	   		System.out.println(&quot;Debe generar Usuario - Opcion [1]&quot;); &#xD;
+                	   		System.out.println(&quot;---------------------------------&quot;); &#xD;
+                	   		break;               	   		&#xD;
+                	   	}&#xD;
+                 	System.out.println(&quot;Debe Autenticarse&quot;);&#xD;
+	                    System.out.println(&quot;------------------------------&quot;);  &#xD;
+	                    System.out.println(&quot;Ingrese Correo&quot;);&#xD;
+	                    String correo = input.nextLine();&#xD;
+	                    System.out.println(&quot;Ingrese Password&quot;);&#xD;
+	                    String pass = input.nextLine();&#xD;
+	                    if (newUsuario.getCorreo().contentEquals(correo) &amp;&amp; newUsuario.getPassword().contentEquals(pass)) {&#xD;
+	                    	System.out.println(&quot;Usuario Valido&quot;);&#xD;
+	                    	System.out.println(&quot;Ficha de Usuario:&quot;);	                    	&#xD;
+	                        System.out.println(&quot;------------------------------&quot;); &#xD;
+	                        System.out.println(&quot;Nombre: &quot; + newUsuario.getPersona().getNombre());&#xD;
+	                        System.out.println(&quot;Apellido: &quot; + newUsuario.getPersona().getApellido());&#xD;
+	                        System.out.println(&quot;Fecha Nacimiento: &quot; + newUsuario.getPersona().getFechaNacimiento());&#xD;
+	                        System.out.println(&quot;Sexo: &quot; + newUsuario.getPersona().getSexo());&#xD;
+	                        System.out.println(&quot;Tipo Persona: &quot; + newUsuario.getPersona().getTipoPersona());	                  &#xD;
+	                        System.out.println(&quot;------------------------------&quot;); &#xD;
+	                        System.out.println(&quot;Toma de Datos - IMC&quot;);&#xD;
+	                        System.out.println(&quot;------------------------------&quot;); &#xD;
+	                        System.out.println(&quot;Ingrese Fecha Actual dd/mm/aaaa&quot;);&#xD;
+	                        String newFecha = input.nextLine();&#xD;
+	                        System.out.println(&quot;Ingrese su Peso&quot;);&#xD;
+	                        double newPeso = input.nextDouble();&#xD;
+	                        System.out.println(&quot;Ingrese su Altura - [0,00]&quot;);&#xD;
+	                        double newAltura = input.nextDouble();&#xD;
+	                        Imc imc = new Imc(newFecha, newPeso, newAltura);                  &#xD;
+	                        double result = imc.calcularImc();&#xD;
+	                        System.out.println(&quot;-------------------------&quot;);&#xD;
+	                        System.out.println(&quot;Su Indice de Masa Corporal&quot;);&#xD;
+	                        System.out.println(&quot;-------------------------&quot;);&#xD;
+	                        if (newUsuario.getPersona().getSexo().equals(&quot;m&quot;)) {&#xD;
+	                        	// Hombres&#xD;
+		                        if(result &lt; 20.00){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Bajo Peso&quot;);	&#xD;
+		                        	imc.setInterpretacion(&quot;Bajo Peso&quot;);&#xD;
+		                        }else if(result>=20.00 &amp;&amp; result&lt;=24.9){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Normal&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Normal&quot;);&#xD;
+		                        }else if(result>=25.00 &amp;&amp; result&lt;=29.9){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Obesidad Leve&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Obesidad Leve&quot;);&#xD;
+		                        }else if(result>=30.00 &amp;&amp; result&lt;=40.00){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Obesidad Severa&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Obesidad Severa&quot;);&#xD;
+		                        }else if(result > 40.00){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Obesidad Muy Severa&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Obesidad Muy Severa&quot;);&#xD;
+		                        }else{&#xD;
+		                        	System.out.println(&quot;Sin Clasificacón - Consulte a su Medico&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Sin Clasificacón&quot;);&#xD;
+		                        }&#xD;
+	                        }else {&#xD;
+	                        	 // Mujeres&#xD;
+		                        if(result &lt; 20.00){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Bajo Peso&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Bajo Peso&quot;);&#xD;
+		                        }else if(result>=20.00 &amp;&amp; result&lt;=23.9){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Normal&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Normal&quot;);&#xD;
+		                        }else if(result>=24.00 &amp;&amp; result&lt;=28.9){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Obesidad Leve&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Obesidad Leve&quot;);&#xD;
+		                        }else if(result>=29.00 &amp;&amp; result&lt;=37.00){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Obesidad Severa&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Obesidad Severa&quot;);&#xD;
+		                        }else if(result > 37.00){&#xD;
+		                        	System.out.println(&quot;Valor : &quot; + result);&#xD;
+		                        	System.out.println(&quot;Obesidad Muy Severa&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Obesidad Muy Severa&quot;);&#xD;
+		                        }else{&#xD;
+		                        	System.out.println(&quot;Sin Clasificacón - Consulte a su Medico&quot;);&#xD;
+		                        	imc.setInterpretacion(&quot;Sin Clasificacón&quot;);&#xD;
+		                        }&#xD;
+	                        }&#xD;
+	                        // Agregamos IMC con todos los datos a la lista&#xD;
+	                        imcList.add(imc);&#xD;
+	                        // Asociamos la lista a la persona.&#xD;
+	                        newUsuario.getPersona().setImc(imcList);&#xD;
+	                        System.out.println(&quot;\n&quot;);       &#xD;
+	                        break;	                    	&#xD;
+	                    } else {&#xD;
+	                        System.out.println(&quot;Error usuario o password no valido&quot;);	                        &#xD;
+	                        System.out.println(&quot;\n&quot;); 	                      &#xD;
+	                    }                         &#xD;
+                     break;&#xD;
+                 case &quot;3&quot;:&#xD;
+                 	if (newUsuario == null) {&#xD;
+                	   		System.out.println(&quot;Debe generar Usuario - Opcion [1]&quot;); &#xD;
+                	   		System.out.println(&quot;---------------------------------&quot;); &#xD;
+                	   		break;               	   		&#xD;
+                	   	}&#xD;
+                 	System.out.println(&quot;Ficha de Usuario:&quot;);	                    	&#xD;
+                     System.out.println(&quot;------------------------------&quot;); &#xD;
+                     System.out.println(&quot;Nombre: &quot; + newUsuario.getPersona().getNombre());&#xD;
+                     System.out.println(&quot;Apellido: &quot; + newUsuario.getPersona().getApellido());&#xD;
+                     System.out.println(&quot;Fecha Nacimiento: &quot; + newUsuario.getPersona().getFechaNacimiento());&#xD;
+                     System.out.println(&quot;Sexo: &quot; + newUsuario.getPersona().getSexo());&#xD;
+                     System.out.println(&quot;Tipo Persona: &quot; + newUsuario.getPersona().getTipoPersona());	                  &#xD;
+                     System.out.println(&quot;------------------------------&quot;); &#xD;
+                     System.out.println(&quot;Listado de Estados Nutricionales&quot;);&#xD;
+                     System.out.println(&quot;--------------------------------&quot;);&#xD;
+                     for (int i = 0; i &lt;= imcList.size() - 1; i++) {&#xD;
+                         System.out.println(&quot;Fecha Toma : &quot; + imcList.get(i).getFecha());&#xD;
+                         System.out.println(&quot;Altuma cm : &quot; + imcList.get(i).getAltura());&#xD;
+                         System.out.println(&quot;Peso Kg : &quot; + imcList.get(i).getPeso());&#xD;
+                         System.out.println(&quot;IMC : &quot; + imcList.get(i).calcularImc());&#xD;
+                         System.out.println(&quot;Observacion : &quot; + imcList.get(i).getInterpretacion());&#xD;
+                         System.out.println(&quot;--------------------------------&quot;);&#xD;
+                         System.out.println(&quot;\n&quot;); &#xD;
+                     }&#xD;
+                     break;&#xD;
+                 case &quot;4&quot;:&#xD;
+                 	System.out.println(&quot;Aplicacion Finalizada&quot;);&#xD;
+                 	System.out.println(&quot;--------------------------------&quot;);&#xD;
+                     salir = true;&#xD;
+                     break;&#xD;
+				default:&#xD;
+                     System.out.println(&quot;Solo valores entre 0 y 4&quot;);&#xD;
+             }&#xD;
+         } catch (InputMismatchException e) {&#xD;
+             System.out.println(&quot;Valor no Valido&quot;);&#xD;
+             input.next();&#xD;
+         }&#xD;
+     }&#xD;
+     input.close();&#xD;
+ &#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0JXuUBxqEeu0Y4xsG44j_g" name="validarMail" specification="_0FgiABxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0JXuURxqEeu0Y4xsG44j_g" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JXuUhxqEeu0Y4xsG44j_g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>// Patron para validar el email&#xD;
+     Pattern pattern = Pattern.compile(&quot;^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$&quot;); &#xD;
+     Matcher mather = pattern.matcher(email);&#xD;
+     return mather.find();&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_0FdesBxqEeu0Y4xsG44j_g" name="main" isStatic="true" method="_0JXHQBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0FdesRxqEeu0Y4xsG44j_g" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Fes0BxqEeu0Y4xsG44j_g" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_0FgiABxqEeu0Y4xsG44j_g" name="validarMail" isStatic="true" method="_0JXuUBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0FgiARxqEeu0Y4xsG44j_g" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FhJEBxqEeu0Y4xsG44j_g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0FiXMBxqEeu0Y4xsG44j_g" name="Persona">
+        <ownedAttribute xmi:id="_0I-swBxqEeu0Y4xsG44j_g" name="nombre">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0I_T0BxqEeu0Y4xsG44j_g" name="apellido">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0I_64BxqEeu0Y4xsG44j_g" name="sexo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0JAh8BxqEeu0Y4xsG44j_g" name="fechaNacimiento">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0JBJABxqEeu0Y4xsG44j_g" name="tipoPersona">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0JC-MBxqEeu0Y4xsG44j_g" name="imc" type="_0FKjwBxqEeu0Y4xsG44j_g" isOrdered="true" association="_0JgRMBxqEeu0Y4xsG44j_g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0JC-MRxqEeu0Y4xsG44j_g" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0JY8cBxqEeu0Y4xsG44j_g" name="Persona" specification="_0FnPsBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0JY8cRxqEeu0Y4xsG44j_g" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JY8chxqEeu0Y4xsG44j_g" name="apellido">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JY8cxxqEeu0Y4xsG44j_g" name="newSexo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JY8dBxqEeu0Y4xsG44j_g" name="fechaNacimiento">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JY8dRxqEeu0Y4xsG44j_g" name="newTipoPersona">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JY8dhxqEeu0Y4xsG44j_g" type="_0FiXMBxqEeu0Y4xsG44j_g" direction="return"/>
+          <language>java</language>
+          <body>super();&#xD;
+		this.nombre = nombre;&#xD;
+		this.apellido = apellido;&#xD;
+		this.sexo = newSexo;&#xD;
+		this.fechaNacimiento = fechaNacimiento;&#xD;
+		this.tipoPersona = newTipoPersona;&#xD;
+		this.imc = new ArrayList&lt;Imc>();			&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_0FnPsBxqEeu0Y4xsG44j_g" name="Persona" method="_0JY8cBxqEeu0Y4xsG44j_g">
+          <eAnnotations xmi:id="_0Fod0RxqEeu0Y4xsG44j_g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_0Fod0hxqEeu0Y4xsG44j_g" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_0FnPsRxqEeu0Y4xsG44j_g" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0Fn2wBxqEeu0Y4xsG44j_g" name="apellido">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0Fn2wRxqEeu0Y4xsG44j_g" name="newSexo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0Fn2whxqEeu0Y4xsG44j_g" name="fechaNacimiento">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0Fod0BxqEeu0Y4xsG44j_g" name="newTipoPersona">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FpE4BxqEeu0Y4xsG44j_g" type="_0FiXMBxqEeu0Y4xsG44j_g" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0FukcBxqEeu0Y4xsG44j_g" name="Usuario">
+        <ownedAttribute xmi:id="_0JEzYBxqEeu0Y4xsG44j_g" name="correo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0JFacBxqEeu0Y4xsG44j_g" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0JGBgBxqEeu0Y4xsG44j_g" name="persona" type="_0FiXMBxqEeu0Y4xsG44j_g" association="_0Jb_wBxqEeu0Y4xsG44j_g"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0JZjgBxqEeu0Y4xsG44j_g" name="Usuario" specification="_0FwZoBxqEeu0Y4xsG44j_g">
+          <ownedParameter xmi:id="_0JZjgRxqEeu0Y4xsG44j_g" name="correo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JZjghxqEeu0Y4xsG44j_g" name="password">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0JZjgxxqEeu0Y4xsG44j_g" type="_0FukcBxqEeu0Y4xsG44j_g" direction="return"/>
+          <language>java</language>
+          <body>super();&#xD;
+		this.correo = correo;&#xD;
+		this.password = password;&#xD;
+		this.persona = null;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_0FwZoBxqEeu0Y4xsG44j_g" name="Usuario" method="_0JZjgBxqEeu0Y4xsG44j_g">
+          <eAnnotations xmi:id="_0FxAsBxqEeu0Y4xsG44j_g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_0FxAsRxqEeu0Y4xsG44j_g" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_0FwZoRxqEeu0Y4xsG44j_g" name="correo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FwZohxqEeu0Y4xsG44j_g" name="password">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_0FxAshxqEeu0Y4xsG44j_g" type="_0FukcBxqEeu0Y4xsG44j_g" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_0Jb_wBxqEeu0Y4xsG44j_g" name="" memberEnd="_0JGBgBxqEeu0Y4xsG44j_g _0Jb_wRxqEeu0Y4xsG44j_g">
+        <ownedEnd xmi:id="_0Jb_wRxqEeu0Y4xsG44j_g" name="" type="_0FukcBxqEeu0Y4xsG44j_g" association="_0Jb_wBxqEeu0Y4xsG44j_g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_0JgRMBxqEeu0Y4xsG44j_g" name="" memberEnd="_0JgRMRxqEeu0Y4xsG44j_g _0JC-MBxqEeu0Y4xsG44j_g">
+        <ownedEnd xmi:id="_0JgRMRxqEeu0Y4xsG44j_g" name="" type="_0FiXMBxqEeu0Y4xsG44j_g" association="_0JgRMBxqEeu0Y4xsG44j_g"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0EnKIBxqEeu0Y4xsG44j_g" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_0EnxMBxqEeu0Y4xsG44j_g" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_0EoYQBxqEeu0Y4xsG44j_g" name="regex">
+          <packagedElement xmi:type="uml:Class" xmi:id="_0Ip8oBxqEeu0Y4xsG44j_g" name="Matcher"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_0Is_8BxqEeu0Y4xsG44j_g" name="Pattern"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0IdIUBxqEeu0Y4xsG44j_g" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0IiA0BxqEeu0Y4xsG44j_g" name="InputMismatchException"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_0IkdEBxqEeu0Y4xsG44j_g" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0IngYBxqEeu0Y4xsG44j_g" name="Scanner"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_z36x8BxqEeu0Y4xsG44j_g">
+      <eAnnotations xmi:id="_z4ARgBxqEeu0Y4xsG44j_g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_z4GYIBxqEeu0Y4xsG44j_g" base_Package="_zwmpABxqEeu0Y4xsG44j_g">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_0Ie9gBxqEeu0Y4xsG44j_g" base_Element="_0IdIUBxqEeu0Y4xsG44j_g"/>
+  <UMLLabProfile:Reference xmi:id="_0Ij2ABxqEeu0Y4xsG44j_g" base_Element="_0IiA0BxqEeu0Y4xsG44j_g"/>
+  <UMLLabProfile:Reference xmi:id="_0Im5UBxqEeu0Y4xsG44j_g" base_Element="_0IkdEBxqEeu0Y4xsG44j_g"/>
+  <UMLLabProfile:Reference xmi:id="_0IpVkBxqEeu0Y4xsG44j_g" base_Element="_0IngYBxqEeu0Y4xsG44j_g"/>
+  <UMLLabProfile:Reference xmi:id="_0IsY4BxqEeu0Y4xsG44j_g" base_Element="_0Ip8oBxqEeu0Y4xsG44j_g"/>
+  <UMLLabProfile:Reference xmi:id="_0IvcMBxqEeu0Y4xsG44j_g" base_Element="_0Is_8BxqEeu0Y4xsG44j_g"/>
+  <UMLLabProfile:Reference xmi:id="_0JiGYBxqEeu0Y4xsG44j_g" base_Element="_0JgRMBxqEeu0Y4xsG44j_g"/>
+</xmi:XMI>

@@ -38,8 +38,8 @@ public class Main {
                            System.out.println("Inserte Correo Electronico");                     
                            String newCorreo = input.nextLine();
                            // Validamos que sea un correo electronico valido.
-                           if (!validarMail(newCorreo)) {
-                        	   while (!validarMail(newCorreo)) {
+                           if (!newUsuario.validarMail(newCorreo)) {
+                        	   while (!newUsuario.validarMail(newCorreo)) {
                         		   System.out.println("Correo no valido!!");   
                             	   System.out.println("Inserte Correo Electronico");                     
                                    newCorreo = input.nextLine();
@@ -48,8 +48,8 @@ public class Main {
                            System.out.println("Inserte Cotraseña Usuario");                 
                            String newPass = input.nextLine();
                            // Validamos que la contraseña sea mayor a 4 caracteres
-                           if (newPass.length() < 4) {
-                        	   while (newPass.length() < 4) {
+                           if (newUsuario.validarLargoPassword(newPass)) {
+                        	   while (newUsuario.validarLargoPassword(newPass)) {
                         		   System.out.println("Minimo 4 Caracteres!!");   
                             	   System.out.println("Inserte Cotraseña Usuario");                     
                             	   newPass = input.nextLine();
@@ -78,10 +78,10 @@ public class Main {
 	                    String correo = input.nextLine();
 	                    System.out.println("Ingrese Password");
 	                    String pass = input.nextLine();
-	                    if (newUsuario.getCorreo().contentEquals(correo) && newUsuario.getPassword().contentEquals(pass)) {
+	                    if ((newUsuario.validarCorreos(newUsuario.getCorreo(), correo)) && newUsuario.validarPasswords(newUsuario.getPassword(), pass)) {
 	                        System.out.println("Usuario Valido");
 	                        System.out.println("------------------------------"); 
-	                        System.out.println("Ingrear Persona");
+	                        System.out.println("Ingresar Persona");
 	                        System.out.println("------------------------------");  
 	                        System.out.println("Datos Usuario Autenticado");
 	                        System.out.println("------------------------------"); 
@@ -251,12 +251,7 @@ public class Main {
  
     }	
 	
-	public static boolean validarMail(String email) {
-        // Patron para validar el email
-        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"); 
-        Matcher mather = pattern.matcher(email);
-        return mather.find();
-    }
+	
 
 
 }

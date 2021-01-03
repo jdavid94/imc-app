@@ -41,7 +41,6 @@ public class Imc {
 	}
 	
 	
-	
 	public String getInterpretacion() {
 		return interpretacion;
 	}
