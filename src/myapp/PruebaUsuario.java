@@ -11,8 +11,7 @@ public class PruebaUsuario {
 	@Test
 	public void pruebaFormatoEmail() {
 		Usuario user = new Usuario();
-		//assertTrue("Se valida el formato del email", user.validarMail("jota.avello@gmail.com"));
-		assertFalse("Se valida el formato del email", user.validarMail("jota.****@gmail.com"));
+		assertFalse("Se valida el formato del email", user.validarMail("jota.******@gmail.com"));
 	}
 	
 	@Test
